@@ -1,4 +1,4 @@
-"""kedro tutorial file for ensuring the package is executable
+"""Kedro Tutorial file for ensuring the package is executable
 as `kedro-tutorial` and `python -m kedro_tutorial`
 """
 import importlib

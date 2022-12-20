@@ -1,7 +1,7 @@
 [tool.kedro]
 package_name = "kedro_tutorial"
-project_name = "kedro tutorial"
-project_version = "0.18.3"
+project_name = "Kedro Tutorial"
+project_version = "0.18.4"
 
 [tool.isort]
 profile = "black"

@@ -5,6 +5,8 @@ generated using Kedro 0.18.3
 import plotly.express as px
 import plotly.graph_objs as go
 import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sn
 
 def compare_passenger_capacity(preprocessed_shuttles: pd.DataFrame):
     return preprocessed_shuttles.groupby(["shuttle_type"]).mean().reset_index()
@@ -32,3 +34,16 @@ def compare_passenger_capacity(preprocessed_shuttles: pd.DataFrame):
         ]
     )
     return fig
+
+
+
+def create_confusion_matrix(companies: pd.DataFrame):
+    actuals = [0, 1, 0, 0, 1, 1, 1, 0, 1, 0, 1]
+    predicted = [1, 1, 0, 1, 0, 1, 0, 0, 0, 1, 1]
+    data = {"y_Actual": actuals, "y_Predicted": predicted}
+    df = pd.DataFrame(data, columns=["y_Actual", "y_Predicted"])
+    confusion_matrix = pd.crosstab(
+        df["y_Actual"], df["y_Predicted"], rownames=["Actual"], colnames=["Predicted"]
+    )
+    sn.heatmap(confusion_matrix, annot=True)
+    return plt

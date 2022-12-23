@@ -11,9 +11,8 @@ import seaborn as sn
 def compare_passenger_capacity(preprocessed_shuttles: pd.DataFrame):
     return preprocessed_shuttles.groupby(["shuttle_type"]).mean().reset_index()
 
-
-# the below function uses plotly.express
-def compare_passenger_capacity(preprocessed_shuttles: pd.DataFrame):
+# This function uses plotly.express
+def compare_passenger_capacity_exp(preprocessed_shuttles: pd.DataFrame):
     fig = px.bar(
         data_frame=preprocessed_shuttles.groupby(["shuttle_type"]).mean().reset_index(),
         x="shuttle_type",
@@ -22,8 +21,9 @@ def compare_passenger_capacity(preprocessed_shuttles: pd.DataFrame):
     return fig
 
 
-# the below function uses plotly.graph_objects
-def compare_passenger_capacity(preprocessed_shuttles: pd.DataFrame):
+# This function uses plotly.graph_objects
+def compare_passenger_capacity_go(preprocessed_shuttles: pd.DataFrame):
+
     data_frame = preprocessed_shuttles.groupby(["shuttle_type"]).mean().reset_index()
     fig = go.Figure(
         [
@@ -33,6 +33,7 @@ def compare_passenger_capacity(preprocessed_shuttles: pd.DataFrame):
             )
         ]
     )
+    
     return fig
 
 

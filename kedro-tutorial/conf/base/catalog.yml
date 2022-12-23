@@ -70,9 +70,9 @@ regressor:
   filepath: data/06_models/regressor.pickle
   versioned: true
 
-shuttle_passenger_capacity_plot:
+shuttle_passenger_capacity_plot_exp:
   type: plotly.PlotlyDataSet
-  filepath: data/08_reporting/shuttle_passenger_capacity_plot.json
+  filepath: data/08_reporting/shuttle_passenger_capacity_plot_exp.json
   versioned: true
   plotly_args:
     type: bar
@@ -85,9 +85,9 @@ shuttle_passenger_capacity_plot:
       yaxis_title: Average passenger capacity
       title: Shuttle Passenger capacity
  
-shuttle_passenger_capacity_plot:
+shuttle_passenger_capacity_plot_go:
   type: plotly.JSONDataSet
-  filepath: data/08_reporting/shuttle_passenger_capacity_plot.json
+  filepath: data/08_reporting/shuttle_passenger_capacity_plot_go.json
   versioned: true
 
 dummy_confusion_matrix:

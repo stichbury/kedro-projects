@@ -8,9 +8,6 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sn
 
-def compare_passenger_capacity(preprocessed_shuttles: pd.DataFrame):
-    return preprocessed_shuttles.groupby(["shuttle_type"]).mean().reset_index()
-
 # This function uses plotly.express
 def compare_passenger_capacity_exp(preprocessed_shuttles: pd.DataFrame):
     fig = px.bar(

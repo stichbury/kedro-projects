@@ -10,12 +10,7 @@ import seaborn as sn
 
 # This function uses plotly.express
 def compare_passenger_capacity_exp(preprocessed_shuttles: pd.DataFrame):
-    fig = px.bar(
-        data_frame=preprocessed_shuttles.groupby(["shuttle_type"]).mean().reset_index(),
-        x="shuttle_type",
-        y="passenger_capacity",
-    )
-    return fig
+    return preprocessed_shuttles.groupby(["shuttle_type"]).mean().reset_index()
 
 
 # This function uses plotly.graph_objects

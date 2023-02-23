@@ -4,4 +4,5 @@ This repo stores a set of Kedro projects that I have put together to test/docume
 
 So far, it contains the following:
 
-* Spaceflights project for 0.18.3 with an additional reporting pipeline
+* Spaceflights project for Kedro 0.18.4 with an additional reporting pipeline
+* Spaceflights project for Kedro 0.18.4 and Kedro Viz 5.2.1 to illustrate experiment tracking
